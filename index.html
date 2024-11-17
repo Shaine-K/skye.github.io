@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/home.png" type="image/x-icon">
+    <title>Welcome Page</title>
+    <style>
+        body {
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://media.istockphoto.com/id/1329960632/vector/yellow-and-green-watercolor-background-for-spring.jpg?s=612x612&w=0&k=20&c=sl7US__tvveSaaX64tTG-O6LfA8MsriUkQtTiFvEx5Q='); 
+            background-size: cover;  
+            background-position: center center;
+            color: white;  
+            font-family: Arial, sans-serif;  
+            text-align: center;
+        }
+
+        .content {
+            background-color: rgba(0, 0, 0, 0.5); 
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #212844;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #3b768d;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <h1>Hi, enjoy this page^_^</h1>
+        <!-- Button linking to main.html -->
+        <button class="btn" onclick="window.location.href='main.html';">OK</button>
+    </div>
+
+</body>
+</html>

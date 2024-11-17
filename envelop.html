@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/enve.jpg" type="image/x-icon">
+    <title>l</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        min-height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('https://img.freepik.com/free-vector/monochrome-watercolor-galaxy-background_23-2148830317.jpg');
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+    }
+    .wrapper {
+        position: relative;
+        width: 15rem; /* Reduced width */
+        height: 8rem; /* Reduced height */
+        margin-top: 1rem;
+        animation: bounce 1s ease-in-out infinite;
+    }
+    .env {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        box-shadow: 5px 20px 15px #c7935378;
+    }
+    .env::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        background: linear-gradient(-120deg, #a6c9fd, #4a6088);
+        clip-path: polygon(0% 0%, 50% 70%, 100% 0%);
+        transform-origin: top;
+        animation: openenv 2s linear forwards 2s;
+    }
+    .env::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: #a6c9fd;
+        border-radius: 0.5rem;
+    }
+    .front {
+        position: absolute;
+        inset: 0;
+        border-right: 7.5rem solid #538b8b;
+        border-top: 5rem solid transparent;
+        border-bottom: 5rem solid transparent;
+        border-radius: 0 0.5rem 0.5rem 0;
+    }
+    .front::before {
+        content: '';
+        position: absolute;
+        border-left: 7.5rem solid #3e416d;
+        border-bottom: 5rem solid transparent;
+        border-top: 5rem solid transparent;
+        top: -5rem;
+    }
+    .front::after {
+        content: '';
+        position: absolute;
+        border-bottom: 5rem solid #476581;
+        border-right: 7.5rem solid transparent;
+        border-left: 7.5rem solid transparent;
+        border-radius: 0 0 0.5rem 0.5rem;
+    }
+    img {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        width: 3rem; /* Reduced size */
+        z-index: 5;
+        transform-origin: top;
+        transform: translate(-50%, -20%);
+        animation: heart 1s forwards 1s;
+    }
+    .lettre {
+        background: #eff;
+        height: 98%; /* Adjusted height */
+        width: 85%;
+        margin: 0 auto;
+        font-size: 1rem;
+        color: #bd0707;
+        font-family: 'pacifico';
+        text-align: center;
+        padding: 1rem 0.5rem; /* Adjusted padding */
+        position: relative;
+        animation: lettre 1s forwards 4s;
+        transform: translateY(-0rem); /* Moves letter up */
+    }
+    @keyframes openenv {
+        100% {
+            transform: rotateX(180deg) translateY(-0.3rem);
+            z-index: -1;
+            background: linear-gradient(45deg, #a08e92, #2e232e);
+        }
+    }
+    @keyframes lettre {
+        100% {
+            transform: translateY(-6rem); /* Adjusted for upward movement */
+        }
+    }
+    @keyframes heart {
+        100% {
+            transform: translate(-50%, -30%) scaleX(0);
+        }
+    }
+    @keyframes bounce {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+    .button-container {
+        position: absolute;
+        bottom: -80px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .btn {
+        padding: 0.8rem 1.5rem;
+        background-color: #212844;
+        color: white;
+        border: none;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+        background-color: #3b768d;
+    }
+</style>
+
+<body>
+<div class="wrapper">
+    <div class="env"></div>
+    <img src="images/heartkuno-removebg-preview.png"  alt="">
+    <div class="lettre">
+        <div>
+            OPEN ME OPEN ME OPEN ME OPEN ME OPEN ME 
+           <br> PANGET, UNGGOY, BAHO!! jk mwa click mo next mwa 
+        </div>
+    </div>
+    <div class="front"></div>
+
+    <div class="button-container">
+        <button class="btn" onclick="window.location.href='secret.html';">Next</button>
+    </div>
+</div>
+</body>
